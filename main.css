@@ -1,0 +1,155 @@
+:root {
+  --g1: #b0c3df;
+  --g2: #93b3d6;
+  --g3: #8ba2d9;
+  --g4: #020202;
+  --g5: #026664;
+  --g6: #8b5cf6;
+  --g7: rgb(35, 94, 119);
+  --g8: #597abf;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  background-color: var(--g1);
+}
+
+header {
+  padding: 25px;
+  /* padding-top: 10%; */
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--g4);
+  margin-bottom: 20px;
+  padding-left: 4%;
+}
+
+#new-todo-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-todo-input {
+  flex: 1 1 0%;
+  background-color: var(--g2);
+  padding: 20px;
+  border-radius: 30px;
+  margin-right: 20px;
+  color: var(--g7);
+  font-size: 20px;
+}
+
+#new-todo-input::placeholder {
+  color: var(--g8);
+}
+
+#new-todo-submit {
+  color: var(--g5);
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-todo-submit:hover {
+  opacity: 0.8;
+}
+
+#new-todo-submit:active {
+  opacity: 0.6;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: 0 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.todo-list {
+  padding: 20px;
+}
+
+.todo-list h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--g4);
+  margin-bottom: 20px;
+}
+
+#todos .todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--g3);
+  padding: 15px;
+  border-radius: 40px;
+  margin-bottom: 15px;
+}
+
+.todo .content {
+  flex: 1 1 0%;
+}
+
+.todo .content .text {
+  color: var(--g7);
+  font-size: 20px;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.todo .content .text:not(:read-only) {
+  color: var(--g5);
+}
+
+.todo .actions {
+  display: flex;
+  margin: 0 -10px;
+}
+
+.todo .actions button {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.todo .actions button:hover {
+  opacity: 0.8;
+}
+
+.todo .actions button:active {
+  opacity: 0.6;
+}
+
+.todo .actions .edit {
+  color: var(--g7);
+}
+
+.todo .actions .delete {
+  color: crimson;
+}
